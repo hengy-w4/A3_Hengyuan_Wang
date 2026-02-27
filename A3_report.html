@@ -37,75 +37,94 @@
 
 			<p>
 				Design Critique:
-			</p>
+				<p>
+				I realized that my main concern with the original spiral graph was not its message, but its perceptual efficiency. While I appreciate the expressive power of the vortex-like form and how it captures the emotional experience of recurring waves, I found that it makes precise comparison unnecessarily difficult. Encoding magnitude through radial distance and band width forces me to judge values along curved paths without a shared baseline. I have to mentally rotate the graphic and estimate widths at angles, which increases cognitive load. As a result, it becomes harder to compare peak heights across years or to assess how sharply cases rose and fell. For a dataset where magnitude and timing are central, I felt that position along a common linear axis would communicate more clearly than area or radial length.
+				</p>
 
-			<p>
-				DESCRIBE YOUR CRITIQUE IN 1-2 PARAGRAPHS.
+				<p>
+				I was also concerned about how the spiral’s composition subtly directs attention. The visual density accumulates in certain quadrants, which unintentionally amplifies particular surges simply because of how the spiral expands.
+				</p>
 			</p>
 		</section>
 
 		<section>
 			<h2>Visualization Sketches</h2>
 
-      <figure>
-				<img src="IMAGE_FILENAME" alt="" />
-				<figcaption>
-          BRIEF CAPTION HERE.
-				</figcaption>
-			</figure>
+		<figure>
+			<img src="Vis1.png" alt="Sketch 1: Linear vertical comparison of new COVID-19 cases by year (2020–2022)" />
+			<figcaption>
+			Sketch 1. New COVID-19 cases (7-day average), separated by year on a shared vertical timeline to improve comparability.
+			</figcaption>
+		</figure>
 
-			<p>
-				Design Rationale for Sketch 1:
-			</p>
+		<p>
+			Design Rationale for Sketch 1:
+		</p>
 
-			<ul>
-				<li>RATIONALE 1</li>
-				<li>RATIONALE 2</li>
-				<li>RATIONALE 3</li>
-			</ul>
+		<ul>
+		<li>
+			Replaced the spiral with a single linear vertical axis so magnitude is encoded by position to improve peception accuracy and reducing the amount of effort needed to grasp the key info.
+		</li>
+		<li>
+			Using symmetrical design, I tried to normalize the effect of angular distribution on data interpretation so that the comparison between years can be made by looking at the horizontal spread while keeping the vertical line fixed. 
+		</li>
+		<li>
+			Simplified the visual structure and remove radial distortion.
+		</li>
+		</ul>
 
-			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
-				<figcaption>
-          BRIEF CAPTION HERE.
-				</figcaption>
-			</figure>
+		<figure>
+			<img src="Vis2.png" alt="Sketch 2: New COVID-19 cases in the United States, paralleled by years (2020–2022)" />
+			<figcaption>
+				Sketch 2. New COVID-19 cases (7-day average), displayed in parallel panels by year to improve cross-year comparison.
+			</figcaption>
+		</figure>
 
-			<p>
-				Design Rationale for Sketch 2:
-			</p>
+		<p>
+			Design Rationale for Sketch 2:
+		</p>
 
-			<ul>
-				<li>RATIONALE 1</li>
-				<li>RATIONALE 2</li>
-				<li>RATIONALE 3</li>
-			</ul>
+		<ul>
+		<li>
+			The key feature of this redesign is that I paralleled each year into its own horizontal panel so that the resolution within one year could be higher (although due to the hand-drawing, the preciseness is compromised)
+		</li>
+		<li>
+			I kept the vertical axis consistent across panels so magnitude is encoded by position on a shared scale, allowing peak heights and overall intensity to be compared directly.
+		</li>
+		<li>
+			While keeping the waves and the original data in the graph, I also added a dotted line in the 2022 sub-graph such that the projected counts can also be extended into the graphs.
+		</li>
+		</ul>
 
-			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
-				<figcaption>
-          BRIEF CAPTION HERE.
-				</figcaption>
-			</figure>
+		<figure>
+			<img src="Vis3.png" alt="Sketch 3: Cumulative COVID-19 cases in the United States (2020–2022)" />
+			<figcaption>
+				Sketch 3. Cumulative confirmed COVID-19 cases in the United States, displayed as a continuous linear time series.
+			</figcaption>
+		</figure>
 
-			<p>
-				Design Rationale for Sketch 3:
-			</p>
+		<p>
+			Design Rationale for Sketch 3:
+		</p>
 
-			<ul>
-				<li>RATIONALE 1</li>
-				<li>RATIONALE 2</li>
-				<li>RATIONALE 3</li>
-			</ul>
-		</section>
-
+		<ul>
+		<li>
+			In this redesign, I shifted from incidence to cumulative cases to emphasize long-term trend and growth. The reason for this change is that the previous designs did not provide a big picture presentation of the pandemic. So in this design, I want to take a birdseye view and observe what the overall trend of the pandemic looked like. For the sake of data accuracy, I did consult external sources for the ball park values at significant timepoints.
+		</li>
+		<li>
+			I chose to use line plot so that the sense of temporal continuity from the original visualization is preserved. In addition, I feel like line chart is more direct in data delivery because the only channel is magnitude(y-axis height), which is a 1-dimensional metric, as opposed to area in my previous redesigns and the original graph.
+		</li>
+		<li>
+			I chose to use slope as the primary visual mark so changes in growth rate become very intuitive.
+		</li>
+		</ul>
 		<section>
 			<h2>Final Visualization Design</h2>
-      
+		
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="covid_circular_histogram.png" alt="Circular histogram of new COVID-19 cases (7-day average) in the United States, 2020–2022" />
 				<figcaption>
-          BRIEF CAPTION HERE.
+				Circular histogram of new COVID-19 cases (7-day average) in the United States, overlaid for 2020–2022. Time progresses clockwise from January at the top, and magnitude is encoded by radial height.
 				</figcaption>
 			</figure>
 
@@ -114,15 +133,12 @@
 		<section>
 			<h2>Final Writeup</h2>
 
-			<p>
-        DESCRIBE YOUR RATIONALE TO JUSTIFY THE DECISIONS FOR YOUR FINAL DESIGN.
-				WHAT ARE YOU TRYING TO CONVEY, AND HOW DOES YOUR DESIGN FACILITATE THIS?
-      </p>
+		<p>
+			My final design aims to most effectively communicate the cyclical recurrence and relative intensity of COVID-19 waves across 2020, 2021, and 2022, while giving the audience greater quantitative resolution. The central message I seek to convey is that although the pandemic unfolded in repeated seasonal-like waves, the magnitude and acceleration of those waves varied substantially across years. Reflecting on the original graph, I appreciated the radial structure and wanted to preserve its circular encoding of time. Therefore, I implemented a circular histogram in which angle encodes day-of-year (temporal progression) and radial height encodes the 7-day average of new confirmed cases. Rather than relying on a line-area combination to represent incidence rates—where width or area can reduce perceptual precision—I shifted to a one-dimensional magnitude encoding. Inspired by lecture examples that combined radial layouts with more analytically precise marks, I integrated histogram bars into a circular framework. I chose bars because they anchor each observation to a shared baseline (the center), strengthening magnitude comparison relative to area-based encodings. Overlaying the three years enables direct comparison at identical time points, reinforcing the cyclical narrative while restoring perceptual accuracy through position along a radial axis. In terms of aesthetic factors, I picked distinct yet restrained blue, orange, and red hues differentiate the three years without overwhelming the composition. I made the radial gridlines relatively subtle and evenly spaced month labels support orientation and scale interpretation.
+		</p>
 
-			<p>
-        REFLECT ON HOW YOUR FINAL DESIGN DOES OR DOES NOT ADDRESS YOUR ORIGINAL CRITIQUE.
-				WHAT TENSIONS OR TRADEOFFS DID YOU ENCOUNTER? WHAT DID NOT WORK OUT AS ANTICIPATED?
-      </p>
+		<p>
+However, the decision to overlay all three years within a shared circular space inevitably introduces visual density, particularly during major surges when the bars from different years cluster in similar angular regions. At peak periods such as winter waves the overlapping colors and stacked radial heights can make it harder to isolate exact magnitudes without careful inspection. Although the shared circular framework strengthens the perception of cyclical recurrence and allows viewers to compare the same timepoints across years, it does not provide the same degree of numerical precision as a linear faceted time-series plot with aligned vertical baselines. In that sense, some fine-grained comparisons, like identifying which year’s peak was marginally higher or quantifying small differences in slopes, is slightly obscured by the radial geometry.		</p>
 		</section>
 	</main>
 </body>
